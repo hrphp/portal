@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ZendSkeletonApplication
 =======================
 
@@ -75,3 +76,9 @@ project and you should be ready to go! It should look something like below:
             Allow from all
         </Directory>
     </VirtualHost>
+=======
+portal
+======
+
+Our website.
+>>>>>>> 44e2ce790f9f34eed09125609af888bf620cab2c
