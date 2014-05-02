@@ -13,5 +13,12 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~1.5"
-    }
+    },
+    "extra": {
+      "heroku": {
+        "framework": "zf2",
+        "document-root": "public",
+        "index-document": "index.php"
+      }
+   }  
 }
