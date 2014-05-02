@@ -1,6 +1,6 @@
 Hampton Roads PHP Meetup Website
 =======================
-[![Build Status](https://travis-ci.org/hrphpmeetup/portal.png)](https://travis-ci.org/hrphpmeetup/portal)  
+[![Build Status](https://travis-ci.org/hrphp/portal.png)](https://travis-ci.org/hrphpmeetup/portal)  
 
 Introduction
 ------------
