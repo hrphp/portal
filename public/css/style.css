@@ -1,37 +1,84 @@
+@import url("http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic");
+
 body {
-    padding-top: 60px;
+    border-top: 10px solid #8892BF;
+    background: url("../img/computer.jpg") 72% 50%;
+    color: #fff;
+    font-family: Arvo, sans-serif;
+    font-weight: 400;
     padding-bottom: 40px;
+    text-align: center;
 }
 
-.zf-green {
-    color: #68b604;
+body strong {
+    font-weight: 700;
 }
 
-.btn-success {
-  background-color: #57a900;
-  background-image: -moz-linear-gradient(top, #70d900, #57a900);
-  background-image: -ms-linear-gradient(top, #70d900, #57a900);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-  background-image: -o-linear-gradient(top, #70d900, #57a900);
-  background-image: linear-gradient(top, #70d900, #57a900);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+.brand {
+    font-weight: 700;
+    font-style: italic;
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-  background-color: #57a900;
+.brand .hrphp-logo-alt {
+    color: #8892BF;
 }
 
-.btn-success:active, .btn-success.active {
-  background-color: #57a900;
-}
-
-div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+.container a.brand {
     margin-left: 0;
-    padding: 8px 20px 12px 40px;
+    padding: 15px 0 0;
+}
+
+.container {
+    padding: 0;
+    width: 100%;
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+}
+
+.container .jumbotron {
+    background: rgba(255, 255, 255, .3);
+    /*border-bottom: 1px solid #8892BF;*/
+    margin: 0;
+    padding: 60px 0 0;
+    width: 100%;
+}
+
+.container .jumbotron h1 {
+    color: #fff;
+    display: inline-block;
+    font-size: 128px;
+    padding: 50px 75px;
+    text-shadow: 7px 8px 0px rgba(0, 0, 0, 0.15)
+}
+
+.container .lead {
+    font-size: 24px;
+    padding: 25px 350px 25px;
+}
+
+.btn-default {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 64px;
+    color: #fff;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 10px 0 0;
+    padding: 25px;
+    text-shadow: none;
+    width: 20%;
+}
+
+.btn-default:hover {
+    color: #8892BF;
+}
+
+footer {
+    color: rgba(255, 255, 255, .3);
+    font-weight: 400;
+    padding: 50px 0 0;
 }
