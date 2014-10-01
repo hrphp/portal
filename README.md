@@ -1,6 +1,6 @@
 Hampton Roads PHP Website
 =======================
-[![Build Status](https://travis-ci.org/hrphp/portal.png)](https://travis-ci.org/hrphpmeetup/portal)  
+[![Build Status](https://travis-ci.org/hrphp/portal.png)](https://travis-ci.org/hrphpmeetup/portal) [ ![Codeship Status for hrphp/portal](https://www.codeship.io/projects/ed98bc40-2b4b-0132-a719-4a91d8f6dcfe/status?branch=master)](https://www.codeship.io/projects/38514)
 
 Introduction
 ------------
