@@ -1,9 +1,12 @@
 language: php
 php:
-- 5.5
-script: ./build.php
+    - 5.5
+install:
+    - composer install --no-interaction --prefer-source
+script:
+    - ./build.php
 deploy:
-  provider: heroku
-  app: hrphp-org
-  api_key:
-    secure: QAWBdIWLp3M8+q0Xwe/ScRG9enmH7b7mXjJeVKhglQmtcSSyBHRdtw2ZfYKJCdIYWfQFCdq8NXtZugJ7pT2hSTQQkwk6sSyLcOjmryN6lReJepcrJSO50nxBVhTMVm6SGRRqxhsTobnCruZh7YOXvzhu/eIcynFR3L6zP3QL8qE=
+    provider: heroku
+    app: hrphp-org
+    api_key:
+        secure: QAWBdIWLp3M8+q0Xwe/ScRG9enmH7b7mXjJeVKhglQmtcSSyBHRdtw2ZfYKJCdIYWfQFCdq8NXtZugJ7pT2hSTQQkwk6sSyLcOjmryN6lReJepcrJSO50nxBVhTMVm6SGRRqxhsTobnCruZh7YOXvzhu/eIcynFR3L6zP3QL8qE=
