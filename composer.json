@@ -1,7 +1,7 @@
 {
     "name": "hrphp/portal",
     "description": "Portal for the Hampton Roads PHP Meetup",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "keywords": [
         "framework",
         "zf2"
