@@ -1,6 +1,11 @@
 language: php
 php:
-  - 5.6
-  - 5.5
-  - 5.4
+- 5.6
+- 5.5
+- 5.4
 script: ./build.php
+deploy:
+  provider: heroku
+  app: hrphp-org
+  api_key:
+    secure: QAWBdIWLp3M8+q0Xwe/ScRG9enmH7b7mXjJeVKhglQmtcSSyBHRdtw2ZfYKJCdIYWfQFCdq8NXtZugJ7pT2hSTQQkwk6sSyLcOjmryN6lReJepcrJSO50nxBVhTMVm6SGRRqxhsTobnCruZh7YOXvzhu/eIcynFR3L6zP3QL8qE=
