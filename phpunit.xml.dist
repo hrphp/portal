@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         bootstrap="tests/bootstrap.php">
+
+    <testsuites>
+        <testsuite name="HRPHP Portal Application Module Test Suite">
+            <directory suffix="Test.php" phpVersion="5.4.0" phpVersionOperator=">=">./tests/ApplicationTest</directory>
+        </testsuite>
+        <testsuite name="HRPHP Twitter Module Test Suite">
+            <directory suffix="Test.php" phpVersion="5.4.0" phpVersionOperator=">=">./tests/ApplicationTest</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="false">
+            <directory suffix=".php">./module</directory>
+        </whitelist>
+    </filter>
+
+</phpunit>
