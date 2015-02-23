@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic");
 
 body {
-    border-top: 10px solid #8892BF;
+    border-top: 5px solid #8892BF;
     /* background: url("../img/computer.jpg") 72% 50%; */
     /* IE10 Consumer Preview */ 
     background-image: -ms-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
@@ -87,7 +87,7 @@ body strong {
     font-style: italic;
     font-weight: 400;
     margin: 0 10px 0 0;
-    padding: 25px;
+    padding: 20px;
     text-shadow: none;
     width: 20%;
 }
