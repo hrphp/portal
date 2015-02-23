@@ -4,7 +4,7 @@ php:
 install:
     - composer install --no-interaction --prefer-source
 script:
-    - ./build.php
+    - ./vendor/bin/phpcs --standard=PSR2 --extensions=php module public 
 deploy:
     provider: heroku
     app: hrphp-org
