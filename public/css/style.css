@@ -57,8 +57,7 @@ body strong {
 }
 
 .container .jumbotron {
-    background: rgba(255, 255, 255, .3);
-    /*border-bottom: 1px solid #8892BF;*/
+    border: 0;
     margin: 0;
     padding: 60px 0 0;
     width: 100%;
