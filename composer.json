@@ -10,7 +10,7 @@
     "require": {
         "php": ">=5.4",
         "zendframework/zendframework": "~2.0",
-        "phing/phing": "@stable"
+        "phing/phing": "~2.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~1.5",
