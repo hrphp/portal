@@ -32,7 +32,7 @@
     <!-- PHPUnit -->
     <target name="phpunit" description="Run unit tests with PHPUnit">
         <echo msg="Running tests in test suite..." />
-        <exec command="${bin.dir}/phpunit --coverage-clover ${reports.dir}/coverage/clover.xml tests"
+        <exec command="${bin.dir}/phpunit --coverage-clover=coverage.clover"
               checkreturn="true" />
     </target>
 

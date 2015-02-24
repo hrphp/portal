@@ -5,6 +5,9 @@ install:
     - composer install --no-interaction --prefer-source
 script:
     - ./vendor/bin/phing build
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 deploy:
     provider: heroku
     app: hrphp-org
