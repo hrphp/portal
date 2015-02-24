@@ -10,3 +10,4 @@ nbproject
 *.iml
 *.un~
 reports
+node_modules
