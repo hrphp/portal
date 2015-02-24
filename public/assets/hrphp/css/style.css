@@ -130,6 +130,6 @@ footer {
 
 @media only screen and (min-width : 1224px) {
     .container .lead {
-        padding: 25px 200px 25px;
+        padding: 25px 20% 25px;
     }
 }
