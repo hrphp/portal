@@ -13,17 +13,18 @@
         ?>
 
         <!-- Le styles -->
-        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                        ->prependStylesheet($this->basePath() . '/css/style.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
-                        ->prependStylesheet('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'); ?>
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/assets/hrphp/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/assets/hrphp/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/assets/vendor/font-awesome/css/font-awesome.min.css')
+                        ->prependStylesheet($this->basePath() . '/assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css')
+                        ->prependStylesheet($this->basePath() . '/assets/vendor/bootstrap/dist/css/bootstrap.min.css'); ?>
 
         <!-- Scripts -->
         <?php echo $this->headScript()
-            ->prependFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
-            ->prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
-            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',));
+            ->prependFile($this->basePath() . '/assets/vendor/bootstrap/dist/js/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/assets/vendor/jquery/dist/jquery.min.js')
+            ->prependFile($this->basePath() . '/assets/vendor/respond/dest/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/assets/vendor/html5shiv/dist/html5shiv.min.js',   'text/javascript', array('conditional' => 'lt IE 9',));
         ?>
 
     </head>
@@ -53,6 +54,11 @@
         <div class="container">
             <?php echo $this->content; ?>
             <footer>
+                <div class="social">
+                    <a href="http://github.com/hrphp" title="hrphp on GitHub"><i class="fa fa-github"></i></a>
+                    <a href="http://twitter.com/hrphpmeetup" title="Follow us at @hrphpmeetup"><i class="fa fa-twitter"></i></a>
+                    <a href="http://757dev.org" title="757Dev Slack"><i class="fa fa-slack"></i></a>
+                </div>
                 <p>&copy; 2013 - <?php echo date('Y'); ?> Hampton Roads PHP User Group. <?php echo $this->translate('All rights reserved.'); ?></p>
             </footer>
         </div> <!-- /container -->

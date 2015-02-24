@@ -6,7 +6,8 @@ nbproject
 .idea
 .project
 .settings
-/vendor/
+vendor
 *.iml
 *.un~
 reports
+node_modules

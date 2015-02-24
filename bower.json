@@ -1,0 +1,24 @@
+{
+  "name": "Hampton Roads PHP",
+  "version": "0.0.0",
+  "homepage": "http://hrphp.org",
+  "authors": [
+    "Guillermo A. Fisher <get@guillermoandraefisher.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "tests",
+    "test"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.1",
+    "respond": "~1.4",
+    "html5shiv": "~3.7"
+  }
+}
