@@ -75,7 +75,7 @@ body strong {
 
 .container .lead {
     font-size: 24px;
-    padding: 25px 350px 25px;
+    padding: 25px 10% 25px;
 }
 
 .btn-default {
@@ -115,4 +115,21 @@ footer {
     color: rgba(255, 255, 255, .3);
     font-weight: 400;
     padding: 25px 0 0;
+}
+
+@media only screen and (max-width : 768px) {
+    .container .jumbotron h1 {
+        font-size: 6em;
+        padding: 20px 75px;
+    }
+
+    .container .lead {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width : 1224px) {
+    .container .lead {
+        padding: 25px 200px 25px;
+    }
 }
