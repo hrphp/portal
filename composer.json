@@ -1,6 +1,6 @@
 {
     "name": "hrphp/portal",
-    "description": "Portal for the Hampton Roads PHP Meetup",
+    "description": "Portal for the Hampton Roads PHP user group",
     "license": "MIT",
     "scripts": {
       "pre-install-cmd": [
@@ -15,9 +15,9 @@
     },
     "require": {
       "php": ">=5.4",
+      "heroku/heroku-buildpack-php": "*",
       "zendframework/zendframework": "~2.0",
-      "phing/phing": "~2.0",
-      "heroku/heroku-buildpack-php": "*"
+      "phing/phing": "~2.0"
     },
     "require-dev": {
       "squizlabs/php_codesniffer": "~1.5",
