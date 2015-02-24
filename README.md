@@ -1,6 +1,6 @@
 Hampton Roads PHP Website
 ==========================
-[![Travis branch](https://img.shields.io/travis/hrphp/portal.svg?style=flat)](https://travis-ci.org/hrphp/portal)
+[![Travis branch](https://img.shields.io/travis/hrphp/portal.svg?style=flat)](https://travis-ci.org/hrphp/portal) [![Coverage Status](http://img.shields.io/scrutinizer/coverage/g/hrphp/portal.svg?style=flat)](http://img.shields.io/scrutinizer/coverage/g/hrphp/portal.svg?style=flat) [![Code Quality](http://img.shields.io/scrutinizer/g/hrphp/portal.svg?style=flat)](http://img.shields.io/scrutinizer/g/hrphp/portal.svg?style=flat)
 
 Introduction
 ------------
