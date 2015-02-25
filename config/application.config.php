@@ -1,9 +1,10 @@
 <?php
+
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
-        //'HrphpTwitter',
+        'HrPhp\Twitter',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -14,7 +15,7 @@ return array(
         // Module class.
         'module_paths' => array(
             './module',
-            './vendor',
+            'HrPhp\Twitter' => dirname(__DIR__) . '/vendor/hrphp/hrphp-twitter',
         ),
 
         // An array of paths from which to glob configuration files after
