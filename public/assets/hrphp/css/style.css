@@ -109,13 +109,13 @@ a.social:hover {
     color: rgba(255, 255, 255, .3);
 }
 
-.tweets p {
+.services p {
     font-size: 1.1em;
     text-align: left;
     vertical-align: middle;
 }
 
-.tweets p a {
+.services p a {
     color: rgba(255, 255, 255, .5);
 }
 
@@ -133,6 +133,10 @@ footer p {
     padding-right: 25px;
 }
 
+footer a.social {
+    color: rgba(255, 255, 255, .5);
+}
+
 @media only screen and (max-width : 768px) {
     .container .jumbotron h1 {
         font-size: 6em;
@@ -145,7 +149,7 @@ footer p {
 }
 
 @media only screen and (max-width : 1200px) {
-    .tweets {
+    .services {
         margin: 0 auto;
         padding: 25px 0;
         width: 60%;

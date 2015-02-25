@@ -19,6 +19,7 @@
       "heroku/heroku-buildpack-php": "*",
       "zendframework/zendframework": "~2.0",
       "hrphp/hrphp-twitter": "*",
+      "hrphp/hrphp-meetup": "*",
       "phing/phing": "~2.0"
     },
     "require-dev": {

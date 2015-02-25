@@ -14,9 +14,6 @@
         <testsuite name="HRPHP Portal Application Module Test Suite">
             <directory suffix="Test.php" phpVersion="5.4.0" phpVersionOperator=">=">./tests/ApplicationTest</directory>
         </testsuite>
-        <testsuite name="HRPHP Twitter Module Test Suite">
-            <directory suffix="Test.php" phpVersion="5.4.0" phpVersionOperator=">=">./tests/ApplicationTest</directory>
-        </testsuite>
     </testsuites>
 
     <filter>

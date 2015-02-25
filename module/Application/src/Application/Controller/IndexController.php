@@ -18,6 +18,9 @@ class IndexController extends AbstractActionController
     {
         $twitter = $this->getServiceLocator()->get('HrPhpTwitterTimeline');
         $tweets = $twitter->get('hrphpmeetup');
-        return new ViewModel(['tweets' => $tweets]);
+
+        $meetup = $this->getServiceLocator()->get('HrPhpMeetupClient');
+        $events = $meetup->getEvents();
+        return new ViewModel(['tweets' => $tweets, 'events' => $events->results]);
     }
 }

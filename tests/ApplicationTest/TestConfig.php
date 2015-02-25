@@ -3,7 +3,8 @@
 return array(
     'modules' => array(
         'Application',
-        'HrPhp\Twitter'
+        'HrPhp\Twitter',
+        'HrPhp\Meetup',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
@@ -12,6 +13,7 @@ return array(
         'module_paths' => array(
             './module',
             'HrPhp\Twitter' => dirname(dirname(__DIR__)) . '/vendor/hrphp/hrphp-twitter',
+            'HrPhp\Meetup' => dirname(dirname(__DIR__)) . '/vendor/hrphp/hrphp-meetup',
         ),
     )
 );
