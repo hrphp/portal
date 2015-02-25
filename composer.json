@@ -2,6 +2,7 @@
     "name": "hrphp/portal",
     "description": "Portal for the Hampton Roads PHP user group",
     "license": "MIT",
+    "minimum-stability": "dev",
     "scripts": {
       "pre-install-cmd": [
         "npm install bower"
@@ -17,6 +18,7 @@
       "php": ">=5.4",
       "heroku/heroku-buildpack-php": "*",
       "zendframework/zendframework": "~2.0",
+      "hrphp/hrphp-twitter": "*",
       "phing/phing": "~2.0"
     },
     "require-dev": {

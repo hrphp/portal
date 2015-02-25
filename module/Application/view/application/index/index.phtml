@@ -10,9 +10,27 @@
         <p class="lead">
             <?php echo $this->translate('The <strong>Hampton Roads PHP User Group</strong> is for PHP developers of all experience levels. We discuss the ways people are using PHP with other technologies, new language features, and whatever else is on our minds.'); ?>
         </p>
-        <p>
-            <a class="btn btn-lg btn-default" href="http://www.meetup.com/Hampton-Roads-PHP-Meetup/">Interested? Learn More...</a>
-        </p>
+    </div>
+    <div class="col-lg-3 col-lg-offset-3">
+        <a class="btn btn-lg btn-default" href="http://www.meetup.com/Hampton-Roads-PHP-Meetup/">Interested? Learn More...</a>
+    </div>
+    <div class="tweets col-lg-3">
+        <div class="media">
+            <div class="media-left">
+                <a href="https://twitter.com/hrphpmeetup" class="social"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="media-body">
+                <p>
+                    <?php $ago = round((time() - strtotime($tweets[0]->created_at))/3600);
+                    printf(
+                        '%s tweeted <a href="https://twitter.com/hrphpmeetup/statuses/%d">%s</a>',
+                        substr_replace($tweets[0]->text, '...', 70),
+                        $tweets[0]->id,
+                        $ago > 1 ? $ago . ' hours ago' : 'less than an hour ago'
+                    ); ?>
+                </p>
+            </div>
+        </div>
     </div>
 
 </div>
