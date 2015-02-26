@@ -109,11 +109,8 @@ a.social:hover {
     color: rgba(255, 255, 255, .3);
 }
 
-.service {
-    display: none;
-}
-
 .service p {
+    display: none;
     font-size: 1.1em;
     text-align: left;
     vertical-align: middle;
