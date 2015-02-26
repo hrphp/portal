@@ -38,14 +38,16 @@ class ApiController extends AbstractActionController
         foreach ($results as $result) {
             $tweet = new \stdClass();
             $tweet->url = sprintf('https://twitter.com/hrphpmeetup/statuses/%d', $result->id);
-            $tweet->excerpt = substr_replace($result->text, '...', 70);
-            $ago = round((time() - strtotime($result->created_at))/3600, 2);
+            $tweet->excerpt = substr_replace($result->text, '...', 80);
+            $ago = round((time() - strtotime($result->created_at))/3600, 1);
             if ($ago < .5) {
-                $tweet->ago = '';
+                $tweet->ago = sprintf('about %d minutes ago', round($ago*60));
             } elseif ($ago < 1) {
                 $tweet->ago = 'less than an hour ago';
             } elseif ($ago < 1.5) {
                 $tweet->ago = 'about an hour ago';
+            } elseif ($ago < 2.5) {
+                $tweet->ago = '2 hours ago';
             } elseif ($ago < 24) {
                 $tweet->ago = sprintf('%d hours ago', $ago);
             } else {

@@ -14,13 +14,11 @@
     <div class="meetup services col-lg-3 col-lg-offset-3">
         <div class="media">
             <div class="media-left">
-                <a href="http://www.meetup.com/<?php echo $events[0]->group->urlname; ?>" class="social"><i class="fa fa-2x fa-calendar"></i></a>
+                <a href="http://www.meetup.com/Hampton-Roads-PHP-Meetup" class="social"><i class="fa fa-2x fa-calendar"></i></a>
             </div>
             <div class="media-body">
-                <p>
-                    <a href="<?php echo $events[0]->event_url; ?>">Upcoming:</a> <strong><?php echo $events[0]->name; ?></strong><br>
-                    <?php printf('%s, %s, %s, %s', $events[0]->venue->name, $events[0]->venue->address_1, $events[0]->venue->city, $events[0]->venue->state); ?><br>
-                    <?php echo date('F j, Y h:i A T', $events[0]->time/1000); ?>
+                <p id="event-container">
+                    <i class="fa fa-spin fa-circle-o-notch"></i>
                 </p>
             </div>
         </div>
@@ -31,14 +29,8 @@
                 <a href="https://twitter.com/hrphpmeetup" class="social"><i class="fa fa-2x fa-twitter"></i></a>
             </div>
             <div class="media-body">
-                <p>
-                    <?php $ago = round((time() - strtotime($tweets[0]->created_at))/3600);
-                    printf(
-                        '%s tweeted <a href="https://twitter.com/hrphpmeetup/statuses/%d">%s</a>',
-                        substr_replace($tweets[0]->text, '...', 70),
-                        $tweets[0]->id,
-                        $ago > 1 ? $ago . ' hours ago' : 'less than an hour ago'
-                    ); ?>
+                <p id="tweet-container">
+                    <i class="fa fa-spin fa-circle-o-notch"></i>
                 </p>
             </div>
         </div>
