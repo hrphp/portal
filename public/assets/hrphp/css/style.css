@@ -109,13 +109,17 @@ a.social:hover {
     color: rgba(255, 255, 255, .3);
 }
 
-.services p {
+.service {
+    display: none;
+}
+
+.service p {
     font-size: 1.1em;
     text-align: left;
     vertical-align: middle;
 }
 
-.services p a {
+.service p a {
     color: rgba(255, 255, 255, .5);
 }
 
@@ -133,6 +137,10 @@ footer p {
     padding-right: 25px;
 }
 
+footer a {
+    color: rgba(255, 255, 255, .5);
+}
+
 footer a.social {
     color: rgba(255, 255, 255, .5);
 }
@@ -145,13 +153,14 @@ footer a.social {
 
     .container .lead {
         font-size: 1.5em;
+        text-align: justify;
     }
 }
 
 @media only screen and (max-width : 1200px) {
-    .services {
+    .service {
         margin: 0 auto;
-        padding: 25px 0;
+        padding: 20px 0;
         width: 60%;
     }
 }

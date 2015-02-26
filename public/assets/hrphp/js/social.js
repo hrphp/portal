@@ -4,7 +4,9 @@ HRPHP.Social = function(){
         populate: function(selector, endpoint, callback){
             $.get(endpoint, function(data){
                 var _html = callback(data);
-                $(selector).html(_html);
+                $obj = $(selector);
+                $obj.html(_html);
+                $obj.parents(".service").fadeIn();
             });
         }
     }

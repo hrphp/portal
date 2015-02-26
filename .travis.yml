@@ -5,7 +5,6 @@ install:
 - composer install --no-interaction --prefer-source
 script:
 - ./vendor/bin/phing -verbose
-after_script:
 - wget https://scrutinizer-ci.com/ocular.phar
 - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 deploy:
