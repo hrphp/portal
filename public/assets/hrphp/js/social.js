@@ -6,7 +6,7 @@ HRPHP.Social = function(){
                 var _html = callback(data);
                 $obj = $(selector);
                 $obj.html(_html);
-                $obj.parents(".service").fadeIn();
+                $obj.fadeIn();
             });
         }
     }
