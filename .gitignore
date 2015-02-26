@@ -12,3 +12,4 @@ vendor
 reports
 node_modules
 coverage.clover
+ocular.phar
