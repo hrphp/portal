@@ -11,6 +11,18 @@ return array(
                 )
             )
         ),
+        'api' => array(
+            'type'    => 'segment',
+            'options' => array(
+                'route'    => '/api[/:action]',
+                'constraints' => array(
+                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                ),
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Api',
+                ),
+            ),
+        ),
         // The following is a route to simplify getting started creating
         // new controllers and actions without needing to create a new
         // module. Simply drop new controllers in, and you can access them
