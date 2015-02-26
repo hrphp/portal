@@ -16,6 +16,11 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $twitter = $this->getServiceLocator()->get('HrPhpTwitterTimeline');
+        $tweets = $twitter->get('hrphpmeetup');
+
+        $meetup = $this->getServiceLocator()->get('HrPhpMeetupClient');
+        $events = $meetup->getEvents(['group_urlname' => 'Hampton-Roads-PHP-Meetup']);
+        return new ViewModel(['tweets' => $tweets, 'events' => $events->results]);
     }
 }

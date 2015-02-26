@@ -1,18 +1,35 @@
 {
     "name": "hrphp/portal",
-    "description": "Portal for the Hampton Roads PHP Meetup",
+    "description": "Portal for the Hampton Roads PHP user group",
     "license": "MIT",
-    "keywords": [
-        "framework",
-        "zf2"
-    ],
-    "homepage": "http://framework.zend.com/",
+    "minimum-stability": "dev",
+    "scripts": {
+      "pre-install-cmd": [
+        "npm install bower"
+      ],
+      "post-install-cmd": [
+        "PATH=`pwd`/vendor/node/bin:$PATH ./node_modules/bower/bin/bower install"
+      ],
+      "post-update-cmd": [
+        "PATH=`pwd`/vendor/node/bin:$PATH ./node_modules/bower/bin/bower install"
+      ]
+    },
     "require": {
-        "php": ">=5.4",
-        "zendframework/zendframework": "~2.0"
+      "php": ">=5.4",
+      "heroku/heroku-buildpack-php": "*",
+      "zendframework/zendframework": "~2.0",
+      "hrphp/hrphp-twitter": "*",
+      "hrphp/hrphp-meetup": "*",
+      "phing/phing": "~2.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "~1.5"
+      "squizlabs/php_codesniffer": "~1.5",
+      "phpunit/phpunit": "~4.0"
+    },
+    "autoload-dev": {
+      "psr-0": {
+        "ApplicationTest\\": "tests/"
+      }
     },
     "extra": {
       "heroku": {

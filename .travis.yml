@@ -1,12 +1,18 @@
 language: php
 php:
-    - 5.5
+- 5.5
 install:
-    - composer install --no-interaction --prefer-source
+- composer install --no-interaction --prefer-source
 script:
-    - ./build.php
+- ./vendor/bin/phing -verbose
+after_script:
+- wget https://scrutinizer-ci.com/ocular.phar
+- php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 deploy:
-    provider: heroku
-    app: hrphp-org
-    api_key:
-        secure: QAWBdIWLp3M8+q0Xwe/ScRG9enmH7b7mXjJeVKhglQmtcSSyBHRdtw2ZfYKJCdIYWfQFCdq8NXtZugJ7pT2hSTQQkwk6sSyLcOjmryN6lReJepcrJSO50nxBVhTMVm6SGRRqxhsTobnCruZh7YOXvzhu/eIcynFR3L6zP3QL8qE=
+  provider: heroku
+  app: hrphp-org
+  api_key:
+    secure: QAWBdIWLp3M8+q0Xwe/ScRG9enmH7b7mXjJeVKhglQmtcSSyBHRdtw2ZfYKJCdIYWfQFCdq8NXtZugJ7pT2hSTQQkwk6sSyLcOjmryN6lReJepcrJSO50nxBVhTMVm6SGRRqxhsTobnCruZh7YOXvzhu/eIcynFR3L6zP3QL8qE=
+env:
+  global:
+    secure: x2Vix7ZaKMV0a2U8i+pWaNwbzqzH5DORb0IYWplhQcnf5CgHnXigq8dp/1IeHFOn7ARZsf6950BcbVBJQuEDrHzyLtl5Sn49AGVSMmIzIt/+plB5PYFi/AwDD9SXA7EVlfl7YMZOA1ATBPthoB1mK72UvvEn02UdyUvjxOHxKpI=
