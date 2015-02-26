@@ -44,7 +44,7 @@ class ApiControllerTest extends PHPUnit_Framework_TestCase
 
     public function testEventsActionCanBeAccessed()
     {
-        $this->markTestSkipped();
+        //$this->markTestSkipped();
         $this->routeMatch->setParam('action', 'events');
 
         $result   = $this->controller->dispatch($this->request);
