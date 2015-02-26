@@ -40,7 +40,9 @@ class ApiController extends AbstractActionController
             $tweet->url = sprintf('https://twitter.com/hrphpmeetup/statuses/%d', $result->id);
             $tweet->excerpt = substr_replace($result->text, '...', 80);
             $ago = round((time() - strtotime($result->created_at))/3600, 1);
-            if ($ago < .5) {
+            if ($ago < .1) {
+                $tweet->ago = 'just now';
+            } elseif ($ago < .5) {
                 $tweet->ago = sprintf('about %d minutes ago', round($ago*60));
             } elseif ($ago < 1) {
                 $tweet->ago = 'less than an hour ago';
