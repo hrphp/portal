@@ -20,7 +20,7 @@ class IndexController extends AbstractActionController
         $tweets = $twitter->get('hrphpmeetup');
 
         $meetup = $this->getServiceLocator()->get('HrPhpMeetupClient');
-        $events = $meetup->getEvents();
+        $events = $meetup->getEvents(['group_urlname' => 'Hampton-Roads-PHP-Meetup']);
         return new ViewModel(['tweets' => $tweets, 'events' => $events->results]);
     }
 }

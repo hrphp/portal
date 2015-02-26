@@ -205,12 +205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hrphp/hrphp-meetup.git",
-                "reference": "9711f39b77c29ea9a5d1c3929c09d4340e69b79d"
+                "reference": "1ae336c5a32b9dedfc1953f9c51b447397082f04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hrphp/hrphp-meetup/zipball/9711f39b77c29ea9a5d1c3929c09d4340e69b79d",
-                "reference": "9711f39b77c29ea9a5d1c3929c09d4340e69b79d",
+                "url": "https://api.github.com/repos/hrphp/hrphp-meetup/zipball/1ae336c5a32b9dedfc1953f9c51b447397082f04",
+                "reference": "1ae336c5a32b9dedfc1953f9c51b447397082f04",
                 "shasum": ""
             },
             "require": {
@@ -239,7 +239,7 @@
                 "meetup",
                 "zf2"
             ],
-            "time": "2015-02-25 18:52:16"
+            "time": "2015-02-25 23:55:15"
         },
         {
             "name": "hrphp/hrphp-twitter",
