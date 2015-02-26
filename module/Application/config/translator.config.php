@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'locale' => 'en_US',
     'translation_file_patterns' => array(
