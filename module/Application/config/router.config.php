@@ -12,14 +12,16 @@ return array(
             )
         ),
         'api' => array(
-            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'type'    => 'segment',
             'options' => array(
-                'route' => '/',
+                'route'    => '/api[/:action]',
+                'constraints' => array(
+                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                ),
                 'defaults' => array(
                     'controller' => 'Application\Controller\Api',
-                    'action' => 'index'
-                )
-            )
+                ),
+            ),
         ),
         // The following is a route to simplify getting started creating
         // new controllers and actions without needing to create a new
