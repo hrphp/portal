@@ -4,8 +4,8 @@ php:
 install:
 - composer install --no-interaction --prefer-source
 script:
-- if [[ ${TRAVIS_SECURE_ENV_VARS} == "false" ]]; then ./vendor/bin/phing build -verbose
-- if [[ ${TRAVIS_SECURE_ENV_VARS} == "true" ]]; then ./vendor/bin/phing build-full -verbose
+- if [[ ${TRAVIS_SECURE_ENV_VARS} == "false" ]]; then ./vendor/bin/phing build -verbose; fi
+- if [[ ${TRAVIS_SECURE_ENV_VARS} == "true" ]]; then ./vendor/bin/phing build-full -verbose; fi
 - wget https://scrutinizer-ci.com/ocular.phar
 - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 deploy:
