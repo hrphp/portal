@@ -1,10 +1,4 @@
 <?php
-/**
- * This file is part of the hrphp-portal package.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 
 namespace ApplicationTest\Controller;
 
@@ -44,12 +38,17 @@ class ApiControllerTest extends PHPUnit_Framework_TestCase
 
     public function testEventsActionCanBeAccessed()
     {
-        //$this->markTestSkipped();
         $this->routeMatch->setParam('action', 'events');
-
-        $result   = $this->controller->dispatch($this->request);
+        $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
+        $this->assertEquals(200, $response->getStatusCode());
+    }
 
+    public function testTweetsActionCanBeAccessed()
+    {
+        $this->routeMatch->setParam('action', 'tweets');
+        $this->controller->dispatch($this->request);
+        $response = $this->controller->getResponse();
         $this->assertEquals(200, $response->getStatusCode());
     }
 }
