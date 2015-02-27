@@ -1,15 +1,24 @@
-nbproject
+# Misc
 ._*
 .~lock.*
-.buildpath
 .DS_Store
+*.un~
+
+# IDEs
+nbproject
+.buildpath
 .idea
 .project
 .settings
-vendor
 *.iml
-*.un~
+
+# Build artifacts
+vendor
 reports
 node_modules
 coverage.clover
 ocular.phar
+
+# Local configuration
+local.php
+*.local.php
