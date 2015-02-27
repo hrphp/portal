@@ -30,27 +30,6 @@
     </head>
     <body>
     <a href="https://github.com/hrphp/portal"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-        <!--
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand brand" href="<?php echo $this->url('home'); ?>">
-                        <?php echo sprintf($this->translate('hr%sphp%s'), '<span class="hrphp-logo-alt">', '</span>'); ?>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo $this->url('home'); ?>"><?php echo $this->translate('Home'); ?></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        -->
         <div class="container">
             <?php echo $this->content; ?>
             <footer>
@@ -58,10 +37,16 @@
                     <a href="http://github.com/hrphp" title="hrphp on GitHub" class="social"><i class="fa fa-github"></i></a>
                     <a href="http://757dev.org" title="757Dev Slack" class="social"><i class="fa fa-slack"></i></a>
                     <a href="http://twitter.com/hrphpmeetup" title="hrphp on Twitter" class="social"><i class="fa fa-twitter"></i></a>
+                    <a href="http://twitter.com/hrphpmeetup" title="hrphp on Twitter" class="social"><i class="fa fa-heroku"></i></a>
                 </div>
-                <p>&copy; 2013 - <?php echo date('Y'); ?> Hampton Roads PHP User Group. <?php echo $this->translate('All rights reserved.'); ?></p>
+                <p>
+                    &copy; 2013 - <?php echo date('Y'); ?> Hampton Roads PHP User Group. <?php echo $this->translate('All rights reserved.'); ?><br>
+                    Built with <a href="http://php.net">PHP</a>... <a href="http://www.phptherightway.com/">the right way</a>.
+                </p>
             </footer>
         </div> <!-- /container -->
-        <?php echo $this->inlineScript(); ?>
+        <?php echo $this->inlineScript()
+            ->prependFile($this->basePath() . '/assets/hrphp/js/social.js', 'text/javascript', ['defer' => true]);
+        ?>
     </body>
 </html>

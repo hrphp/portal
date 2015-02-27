@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'abstract_factories' => array(
         'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
