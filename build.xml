@@ -3,11 +3,10 @@
 <project name="HRPHP Portal" default="build" basedir=".">
 
     <target name="build"
-            depends="bower, prepare, phpcs, phpunit-unit" />
+            depends="prepare, phpcs, phpunit-unit" />
 
     <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
     <property name="reports.dir" value="${project.basedir}/reports" override="true" />
-    <property name="node_modules.dir" value="${project.basedir}/node_modules" override="true" />
 
     <!-- Clean up from previous builds -->
     <target name="clean" description="Cleanup build artifacts">
@@ -39,13 +38,6 @@
     <target name="phpunit-integration" description="Run integration tests with PHPUnit">
         <echo msg="Running integration tests in test suite..." />
         <exec command="${bin.dir}/phpunit --group=integration --coverage-clover=coverage.clover"
-              checkreturn="true" />
-    </target>
-
-    <!-- Bower -->
-    <target name="bower" description="Install front-end dependencies with bower">
-        <echo msg="Installing front-end dependencies..." />
-        <exec command="${node_modules.dir}/bower/bin/bower install"
               checkreturn="true" />
     </target>
 
