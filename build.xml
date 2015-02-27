@@ -5,6 +5,9 @@
     <target name="build"
             depends="prepare, phpcs, phpunit-unit" />
 
+    <target name="build-full"
+            depends="prepare, phpcs, phpunit-all" />
+
     <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
     <property name="reports.dir" value="${project.basedir}/reports" override="true" />
 
@@ -29,15 +32,15 @@
 
     <!-- PHPUnit: Unit Tests -->
     <target name="phpunit-unit" description="Run unit tests with PHPUnit">
-        <echo msg="Running unit tests in test suite..." />
+        <echo msg="Running only unit tests in test suite..." />
         <exec command="${bin.dir}/phpunit --exclude-group=integration --coverage-clover=coverage.clover"
               checkreturn="true" />
     </target>
 
-    <!-- PHPUnit: Integration Tests -->
-    <target name="phpunit-integration" description="Run integration tests with PHPUnit">
-        <echo msg="Running integration tests in test suite..." />
-        <exec command="${bin.dir}/phpunit --group=integration --coverage-clover=coverage.clover"
+    <!-- PHPUnit: All Tests -->
+    <target name="phpunit-all" description="Run integration tests with PHPUnit">
+        <echo msg="Running all tests in test suite..." />
+        <exec command="${bin.dir}/phpunit --coverage-clover=coverage.clover"
               checkreturn="true" />
     </target>
 
