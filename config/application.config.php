@@ -12,7 +12,7 @@
 
 return array(
     'config_glob_paths' => array(
-        'config/autoload/{,*.}{global,local}.php',
+        dirname(__DIR__) . '/config/autoload/{,*.}{global,local}.php',
     ),
 
     'modules' => array(
