@@ -8,7 +8,7 @@ This is the code behind http://hrphp.org, the Hampton Roads PHP user group's web
 
 Installation
 ------------
-## Build the project
+### Build the project
 In order to build this project, you'll need install both [Node.js](http://nodejs.org/) and [Composer](http://getcomposer.org). Fork and clone the repository to install it locally, then run the following to install the needed dependencies and build the project:
 
     cd my/project/dir
@@ -17,7 +17,7 @@ In order to build this project, you'll need install both [Node.js](http://nodejs
     composer self-update && composer install
     ./vendor/bin/phing build 
 
-## View the site locally
+### View the site locally
 The simplest way to get started, if you are using PHP 5.4 or above, is to start the [internal PHP cli-server](http://php.net/manual/en/features.commandline.webserver.php) in the root directory:
 
     php -S 0.0.0.0:8080 -t public/ public/index.php
