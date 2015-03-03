@@ -15,10 +15,11 @@ HRPHP.Social = function(){
 $(function(){
     HRPHP.Social.populate("#event-container", "/api/events", function(d){
         var _event = d.events[0];
-        var _html = '<a href="' + _event.url + '">Upcoming:</a> '
-            + '<strong>' + _event.name + '</strong><br>'
-            + _event.location + '<br>'
-            + _event.date;
+        var _date = new Date(_event.time);
+        var _html = '<a href="' + _event.url + '" itemprop="url">Upcoming:</a> '
+            + '<strong itemprop="name">' + _event.name + '</strong><br>'
+            + '<span itemprop="location">' + _event.location + '</span><br>'
+            + '<meta itemprop="startDate" content="' + _date.toISOString() +'">' + _event.date;
         return _html;
     });
 
