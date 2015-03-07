@@ -2,8 +2,7 @@
 
 body {
     border-top: 5px solid #8892BF;
-    /* background: url("../img/computer.jpg") 72% 50%; */
-    /* IE10 Consumer Preview */ 
+    /* IE10 Consumer Preview */
     background-image: -ms-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
 
     /* Mozilla Firefox */ 
@@ -24,7 +23,8 @@ body {
     color: #fff;
     font-family: Arvo, sans-serif;
     font-weight: 400;
-    padding-bottom: 40px;
+    margin: 0;
+    padding: 0 0 10px;
     text-align: center;
 }
 
@@ -32,28 +32,26 @@ body strong {
     font-weight: 700;
 }
 
+.fork-on-github {
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .brand {
     font-weight: 700;
     font-style: italic;
+    margin-top: 150px;
 }
 
-.brand .hrphp-logo-alt {
-    color: #8892BF;
-}
-
-.container a.brand {
-    margin-left: 0;
-    padding: 15px 0 0;
+.brand img {
+    max-width: 100%;
 }
 
 .container {
     padding: 0;
     width: 100%;
-}
-
-.navbar {
-    background: transparent;
-    border: none;
 }
 
 .container .jumbotron {
@@ -69,30 +67,13 @@ body strong {
     color: #fff;
     display: inline-block;
     font-size: 128px;
-    padding: 50px 75px 25px;
+    padding: 50px 0 25px;
     text-shadow: 7px 8px 0px rgba(0, 0, 0, 0.15)
 }
 
 .container .lead {
     font-size: 24px;
     padding: 25px 10% 25px;
-}
-
-.btn-default {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, .4);
-    border-radius: 8px;
-    color: rgba(255, 255, 255, .8);
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-    margin: 0 10px 0 0;
-    padding: 20px 40px;
-    text-shadow: none;
-}
-
-.btn-default:hover {
-    color: #8892BF;
 }
 
 .social-icons {
@@ -143,6 +124,10 @@ footer a.social {
 }
 
 @media only screen and (max-width : 768px) {
+    .brand img {
+        width: 300px;
+    }
+
     .container .jumbotron h1 {
         font-size: 6em;
         padding: 20px 0 10px;
