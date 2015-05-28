@@ -1,0 +1,154 @@
+@import url("http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic");
+
+body {
+    border-top: 5px solid #8892BF;
+    /* IE10 Consumer Preview */
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #8892BF), color-stop(1, #35394A));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #8892BF 0%, #35394A 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(ellipse farthest-corner at center, #8892BF 0%, #35394A 100%);
+    
+    color: #fff;
+    font-family: Arvo, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+}
+
+body strong {
+    font-weight: 700;
+}
+
+.fork-on-github {
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.brand {
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 150px;
+}
+
+.brand img {
+    max-width: 100%;
+}
+
+.container {
+    padding: 0;
+    width: 100%;
+}
+
+.container .jumbotron {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 60px 0 0;
+    width: 100%;
+}
+
+.container .jumbotron h1 {
+    color: #fff;
+    display: inline-block;
+    font-size: 128px;
+    padding: 50px 0 25px;
+    text-shadow: 7px 8px 0px rgba(0, 0, 0, 0.15)
+}
+
+.container .lead {
+    font-size: 24px;
+    padding: 25px 10% 25px;
+}
+
+.social-icons {
+    margin: 0 0 1em;
+}
+
+a.social {
+    color: white;
+    font-size: 3em;
+    padding: 0 10px;
+}
+
+a.social:hover {
+    color: rgba(255, 255, 255, .3);
+}
+
+.service p {
+    display: none;
+    font-size: 1.1em;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.service p a {
+    color: rgba(255, 255, 255, .5);
+}
+
+footer {
+    border-top: 1px solid #fff;
+    border-color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .3);
+    font-weight: 400;
+    margin-top: 25px;
+    padding: 25px 0 0;
+}
+
+footer p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, .5);
+}
+
+footer a.social {
+    color: rgba(255, 255, 255, .5);
+}
+
+@media only screen and (max-width : 768px) {
+    .brand img {
+        width: 300px;
+    }
+
+    .container .jumbotron h1 {
+        font-size: 6em;
+        padding: 20px 0 10px;
+    }
+
+    .container .lead {
+        font-size: 1.5em;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .service {
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width : 1224px) {
+    .container .lead {
+        padding: 25px 20% 25px;
+    }
+}

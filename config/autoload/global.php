@@ -1,16 +1,9 @@
 <?php
 /**
- * Global Configuration Override
+ * Global Configuration
  *
- * You can use this file for overriding configuration values from modules, etc.
- * You would place values in here that are agnostic to the environment and not
- * sensitive to security.
- *
- * @NOTE: In practice, this file will typically be INCLUDED in your source
- * control, so do not include passwords or other sensitive information in this
- * file.
+ * For simplicity's sake, all module settings exist here. See the local.php.dist file that ships with this project for
+ * more details about local configuration.
  */
 
-return array(
-    // ...
-);
+return array();

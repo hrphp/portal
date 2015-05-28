@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Set some basic project information and targets -->
+<project name="HRPHP Portal" default="build" basedir=".">
+
+    <target name="build"
+            depends="prepare, phpcs, phpunit-unit" />
+
+    <target name="build-full"
+            depends="prepare, phpcs, phpunit-all" />
+
+    <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
+    <property name="reports.dir" value="${project.basedir}/reports" override="true" />
+
+    <!-- Clean up from previous builds -->
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${reports.dir}/coverage" />
+        <delete dir="${reports.dir}/logs" />
+    </target>
+
+    <!-- Prepare for the new build -->
+    <target name="prepare" depends="clean" description="Prepare for build">
+        <mkdir dir="${reports.dir}/coverage" />
+        <mkdir dir="${reports.dir}/logs" />
+    </target>
+
+    <!-- PHP Code Sniffer -->
+    <target name="phpcs" description="Check code style with PHP Code Sniffer">
+        <echo msg="Checking code against PSR2 standard..." />
+        <exec command="${bin.dir}/phpcs -v --standard=PSR2 --extensions=php --ignore=*/config/* module/Application/src > ${reports.dir}/logs/phpcs.log"
+              checkreturn="true" />
+    </target>
+
+    <!-- PHPUnit: Unit Tests -->
+    <target name="phpunit-unit" description="Run unit tests with PHPUnit">
+        <echo msg="Running only unit tests in test suite..." />
+        <exec command="${bin.dir}/phpunit --exclude-group=integration --coverage-clover=coverage.clover"
+              checkreturn="true" />
+    </target>
+
+    <!-- PHPUnit: All Tests -->
+    <target name="phpunit-all" description="Run integration tests with PHPUnit">
+        <echo msg="Running all tests in test suite..." />
+        <exec command="${bin.dir}/phpunit --coverage-clover=coverage.clover"
+              checkreturn="true" />
+    </target>
+
+</project>

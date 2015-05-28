@@ -1,78 +1,34 @@
-Hampton Roads PHP Meetup Website
-=======================
-[![Build Status](https://travis-ci.org/hrphp/portal.png)](https://travis-ci.org/hrphpmeetup/portal)  
+Hampton Roads PHP Portal
+==========================
+[![Travis branch](https://img.shields.io/travis/hrphp/portal.svg?style=flat)](https://travis-ci.org/hrphp/portal) [![Coverage Status](http://img.shields.io/scrutinizer/coverage/g/hrphp/portal.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/portal/?branch=master) [![Code Quality](http://img.shields.io/scrutinizer/g/hrphp/portal.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/portal/?branch=master)
 
 Introduction
 ------------
-This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with ZF2.
+This is the code behind http://hrphp.org, the Hampton Roads PHP user group's website. It is powered by [ZF2](http://framework.zend.com/manual/2.0/en/user-guide/overview.html).
 
 Installation
 ------------
-
-Using Composer (recommended)
-----------------------------
-The recommended way to get a working copy of this project is to clone the repository
-and use `composer` to install dependencies using the `create-project` command:
-
-    curl -s https://getcomposer.org/installer | php --
-    php composer.phar create-project -sdev --repository-url="https://packages.zendframework.com" zendframework/skeleton-application path/to/install
-
-Alternately, clone the repository and manually invoke `composer` using the shipped
-`composer.phar`:
+### Build the project
+In order to build this project, you'll need install both [Node.js](http://nodejs.org/) and [Composer](http://getcomposer.org). Fork and clone the repository to install it locally, then run the following to install the needed dependencies and run the build:
 
     cd my/project/dir
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git
-    cd ZendSkeletonApplication
-    php composer.phar self-update
-    php composer.phar install
+    git clone git://github.com/username/portal.git hrphp-portal
+    cd hrphp-portal
+    composer self-update && composer install
+    ./vendor/bin/phing build 
 
-(The `self-update` directive is to ensure you have an up-to-date `composer.phar`
-available.)
+### Define environment variables
+In order to connect to some of the services used by this site, you'll need to define the following environment variables:
 
-Another alternative for downloading the project is to grab it via `curl`, and
-then pass it to `tar`:
+    MEETUP_API_KEY (ABDE12456AB2324445 can be used)
+    TWITTER_CONSUMER_KEY
+    TWITTER_CONSUMER_SECRET
+    TWITTER_OAUTH_ACCESS_TOKEN
+    TWITTER_OAUTH_ACCESS_TOKEN_SECRET
 
-    cd my/project/dir
-    curl -#L https://github.com/zendframework/ZendSkeletonApplication/tarball/master | tar xz --strip-components=1
-
-You would then invoke `composer` to install dependencies per the previous
-example.
-
-Using Git submodules
---------------------
-Alternatively, you can install using native git submodules:
-
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git --recursive
-
-Web Server Setup
-----------------
-
-### PHP CLI Server
-
-The simplest way to get started if you are using PHP 5.4 or above is to start the internal PHP cli-server in the root directory:
+### View the site locally
+The simplest way to get started is to start the [internal PHP cli-server](http://php.net/manual/en/features.commandline.webserver.php) in the root directory:
 
     php -S 0.0.0.0:8080 -t public/ public/index.php
 
-This will start the cli-server on port 8080, and bind it to all network
-interfaces.
-
-**Note: ** The built-in CLI server is *for development only*.
-
-### Apache Setup
-
-To setup apache, setup a virtual host to point to the public/ directory of the
-project and you should be ready to go! It should look something like below:
-
-    <VirtualHost *:80>
-        ServerName zf2-tutorial.localhost
-        DocumentRoot /path/to/zf2-tutorial/public
-        SetEnv APPLICATION_ENV "development"
-        <Directory /path/to/zf2-tutorial/public>
-            DirectoryIndex index.php
-            AllowOverride All
-            Order allow,deny
-            Allow from all
-        </Directory>
-    </VirtualHost>
+This will start the cli-server on port `8080`, and bind it to all network interfaces.
