@@ -20,7 +20,7 @@ In order to build this project, you'll need install both [Node.js](http://nodejs
 ### Define environment variables
 In order to connect to some of the services used by this site, you'll need to define the following environment variables:
 
-    MEETUP_API_KEY (ABDE12456AB2324445 can be used)
+    MEETUP_API_KEY (view your API key at https://secure.meetup.com/meetup_api/key/)
     TWITTER_CONSUMER_KEY
     TWITTER_CONSUMER_SECRET
     TWITTER_OAUTH_ACCESS_TOKEN
