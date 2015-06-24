@@ -11,16 +11,6 @@ return array(
                 )
             )
         ),
-        'events' => array(
-            'type' => 'Zend\Mvc\Router\Http\Literal',
-            'options' => array(
-                'route' => '/events',
-                'defaults' => array(
-                    'controller' => 'Application\Controller\Events',
-                    'action' => 'index'
-                )
-            )
-        ),
         'api' => array(
             'type'    => 'segment',
             'options' => array(
