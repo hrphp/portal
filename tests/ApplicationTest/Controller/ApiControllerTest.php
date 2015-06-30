@@ -13,6 +13,7 @@ use PHPUnit_Framework_TestCase;
 
 class ApiControllerTest extends PHPUnit_Framework_TestCase
 {
+    /** @var  ApiController */
     protected $controller;
     protected $request;
     protected $response;
@@ -49,7 +50,11 @@ class ApiControllerTest extends PHPUnit_Framework_TestCase
      */
     public function testEventsActionCanBeAccessed()
     {
-        $this->markTestSkipped('Need to figure out how to use the plugin manager while testing.');
+        $mockMeetupPlugin = $this->getMock('Application\Controller\Plugin\MeetupPlugin');
+        $mockMeetupPlugin->expects($this->once())
+            ->method('getEvents')
+            ->willReturn(array());
+        $this->controller->getPluginManager()->setService('hrphpmeetup', $mockMeetupPlugin);
         $this->routeMatch->setParam('action', 'events');
         $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
@@ -61,7 +66,11 @@ class ApiControllerTest extends PHPUnit_Framework_TestCase
      */
     public function testTweetsActionCanBeAccessed()
     {
-        $this->markTestSkipped('Need to figure out how to use the plugin manager while testing.');
+        $mockTwitterPlugin = $this->getMock('Application\Controller\Plugin\TwitterPlugin');
+        $mockTwitterPlugin->expects($this->once())
+            ->method('getTweets')
+            ->willReturn(array());
+        $this->controller->getPluginManager()->setService('hrphptwitter', $mockTwitterPlugin);
         $this->routeMatch->setParam('action', 'tweets');
         $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
