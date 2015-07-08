@@ -10,7 +10,8 @@
  * 'module_paths' array.
  */
 
-$env = getenv('HRPHP_ENV') ? getenv('HRPHP_ENV') : 'DEV';
+$enableCacheFlag = (getenv('APPLICATION_ENV') == 'PROD');
+
 return array(
     'config_glob_paths' => array(
         dirname(__DIR__) . '/config/autoload/{,*.}{global,local}.php',
@@ -23,8 +24,8 @@ return array(
     ),
 
     'module_listener_options' => array(
-        'config_cache_enabled'     => in_array($env, ['PROD']),
-        'module_map_cache_enabled' => in_array($env, ['PROD']),
+        'config_cache_enabled'     => $enableCacheFlag,
+        'module_map_cache_enabled' => $enableCacheFlag,
         'cache_dir'                => 'data/cache/',
         'module_paths' => array(
             './module',
